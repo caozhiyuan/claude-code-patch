@@ -14,10 +14,6 @@ Build a single-file Windows executable (x64) that includes the ripgrep native mo
 bun build .\cli-entry.mjs --compile --target=bun-windows-x64 --outfile claude.exe
 ```
 
-Notes:
-- `cli-entry.mjs` preloads `patch-execsync.mjs` and sets `RIPGREP_NODE_PATH` to the bundled `vendor/ripgrep/x64-win32/ripgrep.node`.
-- If `claude.exe` is locked by a running process, choose a different output name.
-
 ## NODE_OPTIONS (patch)
 
 If you run the unbundled `cli.js` directly and want the execSync patch to apply, set:

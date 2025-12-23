@@ -12,7 +12,7 @@ Upstream Claude Code is an agentic coding tool that lives in your terminal, unde
 
 ## Project highlights (this repo)
 
-- With npm-installed Claude Code, you can `setx NODE_OPTIONS ...` to load `patch-execsync.mjs` at runtime.
+- With npm-installed Claude Code, you can `setx NODE_OPTIONS ...` to load `patch-execsync.mjs` at runtime. Note: in the VS Code integrated terminal, `NODE_OPTIONS` will be cleared, so you must either `set` it manually each session or add it to VS Code’s `terminal.integrated.env.windows` setting.
 - For the VS Code Claude Code extension, point its exe config to this repo’s built `claude.exe`.
 
 ## Local fork notes (this repo)
@@ -48,4 +48,12 @@ If you run the npm-installed CLI (or the unbundled `cli.js`) and want the execSy
 
 ```powershell
 setx NODE_OPTIONS "--import file://C:\claude-code-patch\patch-execsync.mjs"
+```
+
+VS Code setting example:
+
+```json
+"terminal.integrated.env.windows": {
+  "NODE_OPTIONS": "--your-args"
+}
 ```

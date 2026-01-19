@@ -4,6 +4,8 @@
 
 [npm]: https://img.shields.io/npm/v/@anthropic-ai/claude-code.svg?style=flat-square
 
+Note: Current stable version: 2.1.7. There is a bug in the bash tool of version 2.1.12.
+
 This repo focuses on **Windows packaging and runtime patches** for Claude Code.
 
 Upstream Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows -- all through natural language commands. Use it in your terminal, IDE, or tag @claude on Github.
